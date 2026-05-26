@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>محمد حسین حیدری | توسعه دهنده بک اند</title>
+    <meta name="description"
+        content="A modern dark portfolio template inspired by the Northern Lights with comprehensive sections and smooth animations">
+    <meta property="og:title" content="Aurora Portfolio Template">
+    <meta property="og:description" content="A Northern Lights inspired portfolio template with dark mode aesthetic">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--<link rel="stylesheet" href="{% static 'css/min.css' %}">-->
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://fonts.cdnfonts.com/css/yekan-bakh" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'aurora-green': '#00ffaa',
+                        'aurora-blue': '#00aaff',
+                        'aurora-purple': '#aa00ff',
+                        'aurora-pink': '#ff00aa',
+                        'dark-bg': '#0a0e1a',
+                        'dark-card': '#1a1f2e',
+                        'dark-border': '#2a2f3e'
+                    },
+                    animation: {
+                        'aurora': 'aurora 15s ease-in-out infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'glow': 'glow 2s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        aurora: {
+                            '0%, 100%': {
+                                backgroundPosition: '0% 50%',
+                                backgroundSize: '200% 200%'
+                            },
+                            '50%': {
+                                backgroundPosition: '100% 50%',
+                                backgroundSize: '200% 200%'
+                            }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        glow: {
+                            '0%, 100%': {
+                                boxShadow: '0 0 5px rgba(0, 255, 170, 0.5), 0 0 20px rgba(0, 255, 170, 0.3)'
+                            },
+                            '50%': {
+                                boxShadow: '0 0 20px rgba(0, 170, 255, 0.8), 0 0 40px rgba(0, 170, 255, 0.4)'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-dark-bg text-gray-200 aurora-bg">
+    <!-- Aurora overlay effect -->
+    <div class="aurora-overlay"></div>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-dark-bg/90 backdrop-blur-md border-b border-dark-border z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold gradient-text">mhmd</div>
+                {% include 'messages.html' %}
+                <ul class="hidden md:flex space-x-8 m">
+                    <li><a href="#home" class="hover:text-aurora-green transition">خانه</a></li>
+                    <li><a href="#home" class="hover:text-aurora-green transition"></a></li>
+                    <li><a href="#about" class="hover:text-aurora-green transition">درباره من</a></li>
+                    <li><a href="#skills" class="hover:text-aurora-green transition">مهارت ها</a></li>
+                    <li><a href="#services" class="hover:text-aurora-green transition">سرویس ها</a></li>
+                    <li><a href="#portfolio" class="hover:text-aurora-green transition">پروژه ها</a></li>
+                    <!--<a href="#blog" class="block py-2 hover:text-aurora-green">Blog</a>-->
+                    <li><a href="#contact" class="hover:text-aurora-green transition">ارتباط با من</a></li>
+                </ul>
+                <!-- Mobile menu button -->
+                <button class="md:hidden" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="#home" class="block py-2 hover:text-aurora-green">خانه</a>
+                <a href="#about" class="block py-2 hover:text-aurora-green">درباره من</a>
+                <a href="#skills" class="block py-2 hover:text-aurora-green">مهارت ها</a>
+                <a href="#services" class="block py-2 hover:text-aurora-green">سرویس ها</a>
+                <a href="#portfolio" class="block py-2 hover:text-aurora-green">پروژه ها</a>
+                <!--<a href="#blog" class="block py-2 hover:text-aurora-green">Blog</a>-->
+                <a href="#contact" class="block py-2 hover:text-aurora-green">ارتباط با من</a>
+            </div>
+        </div>  
+    </nav>
+    {% block content %}
+
+    {% endblock %}
+    <!-- Footer -->
+    <footer class="py-8 border-t border-dark-border">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-4">
+                <a href="#" class="text-2xl mx-2 hover:text-aurora-green transition"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-2xl mx-2 hover:text-aurora-blue transition"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-2xl mx-2 hover:text-aurora-purple transition"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-2xl mx-2 hover:text-aurora-pink transition"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="text-gray-400">
+                © 2024 Alex Aurora. Built with
+                <a href="https://github.com/OSSPhilippines/freefolio"
+                    class="text-aurora-green hover:text-aurora-blue transition">
+                    Freefolio
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>

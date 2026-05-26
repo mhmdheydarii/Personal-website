@@ -1,0 +1,476 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<section id="home" class="min-h-screen flex items-center justify-center pt-20 relative">
+    <div class="container mx-auto px-6 text-center z-10">
+        <div class="animate-slide-up">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 ">
+                <span class="gradient-text">محمد حسین</span> حیدری
+
+            </h1>
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 ">
+                <span class="gradient-text"> برنامه نویس و توسعه دهنده</span> بک اند
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-400 mb-8">Web framework Django & Django DRF</span></p>
+            <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-12">
+                توسعه دهنده وبسایت ها و وب اپلیکیشن ها با ساختار هاب بروز و امنیت متناسب با روز دنیا جهت برقراری امنیت
+                بیشتر در وبسایت ها همچنین جلوگیری از نفوذ به وبسایت
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#portfolio"
+                    class="px-8 py-3 bg-gradient-to-r from-aurora-green to-aurora-blue rounded-full text-dark-bg font-semibold hover:shadow-lg hover:shadow-aurora-green/50 transition transform hover:scale-105">
+                    پروژه های من
+                </a>
+                <a href="resume.pdf"
+                    class="px-8 py-3 border-2 border-aurora-green rounded-full hover:bg-aurora-green hover:text-dark-bg transition transform hover:scale-105">
+                    مشاهده رزومه
+                </a>
+            </div>
+            <div class="mt-12 flex justify-center space-x-6">
+
+                <a href="#" class="text-2xl hover:text-aurora-blue transition"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-2xl hover:text-aurora-purple transition"><i></i></a>
+                <a href="#" class="text-2xl hover:text-aurora-pink transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-2xl hover:text-aurora-green transition"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Animated particles -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute w-2 h-2 bg-aurora-green rounded-full animate-float" style="top: 20%; left: 10%;"></div>
+        <div class="absolute w-2 h-2 bg-aurora-blue rounded-full animate-float"
+            style="top: 60%; left: 80%; animation-delay: 1s;"></div>
+        <div class="absolute w-2 h-2 bg-aurora-purple rounded-full animate-float"
+            style="top: 40%; left: 60%; animation-delay: 2s;"></div>
+        <div class="absolute w-2 h-2 bg-aurora-pink rounded-full animate-float"
+            style="top: 80%; left: 30%; animation-delay: 3s;"></div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 relative">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 gradient-text">درباره من </h2>
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <p class="text-gray-400 leading-relaxed">
+                محمد حسین حیدری هستم دانشجوی مهندسی کامپیوتر دانشگاه آزاد و برنامه نویس وب به زبان پایتون.
+                </p>
+                <p class="text-gray-400 leading-relaxed">
+                    شروع کارم با زبان برنامه نویسی پایتون رقم خورد و در ادامه مسیر علاقه مند به برنامه نویسی وب (بک اند)
+                    شدم و مسیرم رو به عنوان یک برنامه نویس بک اند با فریم ورک جنگو ادامه دادم.
+                <p class="text-gray-400 leading-relaxed">همیشه درحال یادگیری مباحث جدید در حوضه برنامه نویسی و وب
+                </p>
+                </p>
+                <div class="grid grid-cols-2 gap-4 pt-4">
+                    <div class="bg-dark-card p-4 rounded-lg border border-dark-border">
+                        <div class="text-3xl font-bold text-aurora-green">5</div>
+                        <div class="text-sm text-gray-400">پروژه های انجام شده </div>
+                    </div>
+                    <div class="bg-dark-card p-4 rounded-lg border border-dark-border">
+                        <div class="text-3xl font-bold text-aurora-purple">1/5</div>
+                        <div class="text-sm text-gray-400">سال تجربه</div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div
+                    class="w-80 h-80 mx-auto rounded-full bg-gradient-to-br from-aurora-green via-aurora-blue to-aurora-purple p-1">
+                    <div class="w-full h-full rounded-full bg-dark-bg flex items-center justify-center overflow-hidden">
+                        <!-- اینجا عکس شما قرار می‌گیرد -->
+                        <img src="#" alt="عکس من" class="w-full h-full object-cover rounded-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<!--<section id="experience" class="py-20 bg-dark-card/30">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Work Experience</h2>
+        <div class="max-w-4xl mx-auto space-y-8">
+            <div class="relative pl-8 border-l-2 border-aurora-green">
+                <div class="absolute -left-2 top-0 w-4 h-4 bg-aurora-green rounded-full"></div>
+                <div class="bg-dark-card p-6 rounded-lg card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold text-aurora-green">Senior Full-Stack Developer</h3>
+                        <span class="text-sm text-gray-400">2021 - Present</span>
+                    </div>
+                    <p class="text-gray-300 font-medium mb-2">Tech Innovations Inc.</p>
+                    <p class="text-gray-400">
+                        Lead development of enterprise-scale web applications, mentor junior developers,
+                        and architect cloud-native solutions using modern tech stacks.
+                    </p>
+                </div>
+            </div>
+
+            <div class="relative pl-8 border-l-2 border-aurora-blue">
+                <div class="absolute -left-2 top-0 w-4 h-4 bg-aurora-blue rounded-full"></div>
+                <div class="bg-dark-card p-6 rounded-lg card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold text-aurora-blue">Full-Stack Developer</h3>
+                        <span class="text-sm text-gray-400">2019 - 2021</span>
+                    </div>
+                    <p class="text-gray-300 font-medium mb-2">Digital Solutions Agency</p>
+                    <p class="text-gray-400">
+                        Developed custom web applications for various clients, implemented responsive designs,
+                        and optimized application performance.
+                    </p>
+                </div>
+            </div>
+
+            <div class="relative pl-8 border-l-2 border-aurora-purple">
+                <div class="absolute -left-2 top-0 w-4 h-4 bg-aurora-purple rounded-full"></div>
+                <div class="bg-dark-card p-6 rounded-lg card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold text-aurora-purple">Frontend Developer</h3>
+                        <span class="text-sm text-gray-400">2017 - 2019</span>
+                    </div>
+                    <p class="text-gray-300 font-medium mb-2">Creative Web Studio</p>
+                    <p class="text-gray-400">
+                        Created interactive user interfaces, implemented design mockups, and ensured
+                        cross-browser compatibility for client projects.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>-->
+
+<!-- Skills Section -->
+<section id="skills" class="py-20">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 gradient-text">مهارت ها
+        </h2>
+        <div class="max-w-4xl mx-auto space-y-8">
+            <!-- Frontend Skills -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-aurora-green">Frontend Development</h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span>html / css</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="w-full bg-dark-card rounded-full h-2">
+                            <div class="bg-gradient-to-r from-aurora-green to-aurora-blue h-2 rounded-full progress-bar"
+                                style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Skills -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-aurora-blue">Backend Development</h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span>Python </span>
+                            <span>90%</span>
+                        </div>
+                        <div class="w-full bg-dark-card rounded-full h-2">
+                            <div class="bg-gradient-to-r from-aurora-green to-aurora-blue h-2 rounded-full progress-bar"
+                                style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span>Django / Django DRF</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="w-full bg-dark-card rounded-full h-2">
+                            <div class="bg-gradient-to-r from-aurora-blue to-aurora-purple h-2 rounded-full progress-bar"
+                                style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span>PostgreSQL</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="w-full bg-dark-card rounded-full h-2">
+                            <div class="bg-gradient-to-r from-aurora-purple to-aurora-pink h-2 rounded-full progress-bar"
+                                style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span>Network+</span>
+                            <span>55%</span>
+                        </div>
+                        <div class="w-full bg-dark-card rounded-full h-2">
+                            <div class="bg-gradient-to-r from-aurora-purple to-aurora-pink h-2 rounded-full progress-bar"
+                                style="width: 55%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Others -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-aurora-purple">ابزار ها</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                        <i class="fab fa-docker text-2xl mb-2 text-aurora-green"></i>
+                        <p>Docker</p>
+                    </div>
+                    <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                        <i class="fab fa-github text-2xl mb-2 text-aurora-blue"></i>
+                        <p>GitHub</p>
+                    </div>
+                    <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                        <i class="fab fa-git text-2xl mb-2 text-aurora-purple"></i>
+                        <p>Git</p>
+                    </div>
+                    <div class="bg-dark-card p-4 rounded-lg text-center card-hover">
+                        <i class="fas fa-laptop-code text-2xl mb-2 text-aurora-pink"></i>
+                        <p>VScode</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-20 bg-dark-card/30">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 gradient-text">سرویس ها</h2>
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="bg-dark-card p-6 rounded-lg card-hover text-center">
+                <div
+                    class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-aurora-green to-aurora-blue flex items-center justify-center">
+                    <i class="fas fa-laptop-code text-2xl text-dark-bg"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Web Development</h3>
+                <p class="text-gray-400">
+                    Custom web applications built with modern frameworks and best practices for optimal performance.
+                </p>
+            </div>
+
+
+            <div class="bg-dark-card p-6 rounded-lg card-hover text-center">
+                <div
+                    class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-aurora-pink to-aurora-green flex items-center justify-center">
+                    <i class="fas fa-cloud text-2xl text-dark-bg"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Cloud Solutions</h3>
+                <p class="text-gray-400">
+                    Scalable cloud architecture and deployment strategies for modern applications.
+                </p>
+            </div>
+
+            <div class="bg-dark-card p-6 rounded-lg card-hover text-center">
+                <div
+                    class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-aurora-blue to-aurora-pink flex items-center justify-center">
+                    <i class="fas fa-cogs text-2xl text-dark-bg"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">API Integration</h3>
+                <p class="text-gray-400">
+                    Seamless third-party API integrations and custom API development.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-20">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 gradient-text">پروژه های اخیر</h2>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            {% for project in projects %}
+            <div class="bg-dark-card rounded-lg overflow-hidden card-hover group">
+                <div class=" from-aurora-green to-aurora-blue flex items-center justify-center">
+                    <img src="{{project.image.url}}" alt="عکس من">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">{{project.title}}</h3>
+                    <p class="text-gray-400 mb-4">{{project.description}}</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        {% for skill in project.skill.all %}
+                        <span
+                            class="px-2 py-1 bg-aurora-green/20 text-aurora-green rounded text-xs">{{skill.name}}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="{{project.address}}" class="text-aurora-green hover:text-aurora-blue transition">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<!--<section id="testimonials" class="py-20 bg-dark-card/30">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Client Testimonials</h2>
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+            <div class="bg-dark-card p-6 rounded-lg">
+                <div class="flex items-center mb-4">
+                    <div
+                        class="w-12 h-12 rounded-full bg-gradient-to-br from-aurora-green to-aurora-blue flex items-center justify-center text-xl font-bold text-dark-bg">
+                        JD
+                    </div>
+                    <div class="ml-4">
+                        <h4 class="font-semibold">John Doe</h4>
+                        <p class="text-sm text-gray-400">CEO, TechStart</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 italic">
+                    "Alex delivered an exceptional product that exceeded our expectations. Their technical expertise
+                    and attention to detail made our project a huge success."
+                </p>
+                <div class="mt-4 text-aurora-green">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="bg-dark-card p-6 rounded-lg">
+                <div class="flex items-center mb-4">
+                    <div
+                        class="w-12 h-12 rounded-full bg-gradient-to-br from-aurora-blue to-aurora-purple flex items-center justify-center text-xl font-bold text-dark-bg">
+                        SM
+                    </div>
+                    <div class="ml-4">
+                        <h4 class="font-semibold">Sarah Miller</h4>
+                        <p class="text-sm text-gray-400">Product Manager, InnovateCo</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 italic">
+                    "Working with Alex was a fantastic experience. They brought our vision to life with
+                    creativity and technical excellence."
+                </p>
+                <div class="mt-4 text-aurora-blue">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>-->
+
+<!-- Blog Section -->
+<!--<section id="blog" class="py-20">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Latest Blog Posts</h2>
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            <article class="bg-dark-card rounded-lg overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-aurora-green to-aurora-blue"></div>
+                <div class="p-6">
+                    <div class="text-sm text-gray-400 mb-2">March 15, 2024</div>
+                    <h3 class="text-xl font-semibold mb-3">The Future of Web Development</h3>
+                    <p class="text-gray-400 mb-4">
+                        Exploring emerging trends and technologies shaping the future of web development...
+                    </p>
+                    <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
+                        Read More →
+                    </a>
+                </div>
+            </article>
+
+            <article class="bg-dark-card rounded-lg overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-aurora-blue to-aurora-purple"></div>
+                <div class="p-6">
+                    <div class="text-sm text-gray-400 mb-2">March 10, 2024</div>
+                    <h3 class="text-xl font-semibold mb-3">Building Scalable Applications</h3>
+                    <p class="text-gray-400 mb-4">
+                        Best practices for building applications that scale efficiently with growing demand...
+                    </p>
+                    <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
+                        Read More →
+                    </a>
+                </div>
+            </article>
+
+            <article class="bg-dark-card rounded-lg overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-aurora-purple to-aurora-pink"></div>
+                <div class="p-6">
+                    <div class="text-sm text-gray-400 mb-2">March 5, 2024</div>
+                    <h3 class="text-xl font-semibold mb-3">UI/UX Design Principles</h3>
+                    <p class="text-gray-400 mb-4">
+                        Essential design principles for creating user-friendly and aesthetic interfaces...
+                    </p>
+                    <a href="#" class="text-aurora-green hover:text-aurora-blue transition">
+                        Read More →
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>-->
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-dark-card/30">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 gradient-text">با من در ارتباط باشید</h2>
+        <div class="max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-gradient-to-br from-aurora-green to-aurora-blue flex items-center justify-center">
+                            <i class="fas fa-envelope text-dark-bg"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-400 mx-2">ایمیل</p>
+                            <p class="mx-2">heydarimohammadhosin@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-gradient-to-br from-aurora-blue to-aurora-purple flex items-center justify-center">
+                            <i class="fas fa-phone text-dark-bg"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-400 mx-2">شماره تماس</p>
+                            <p class="mx-2">09999535022</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-gradient-to-br from-aurora-purple to-aurora-pink flex items-center justify-center">
+                            <i class="fas fa-map-marker-alt text-dark-bg"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-400 mx-2">آدرس</p>
+                            <p class="mx-2">خراسان شمالی, بجنورد</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="space-y-4" method="post" action=".">
+                    {% csrf_token %}
+                    <input type="text" name="fullname" placeholder="نام و نام خانوادگی"
+                        class="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-aurora-green">
+                    <input type="email" name="email" placeholder="ایمیل"
+                        class="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-aurora-green">
+                    <textarea name="message" placeholder="پیام شما" rows="4"
+                        class="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-aurora-green"></textarea>
+                    <button type="submit"
+                        class="w-full px-8 py-3 bg-gradient-to-r from-aurora-green to-aurora-blue rounded-lg text-dark-bg font-semibold hover:shadow-lg hover:shadow-aurora-green/50 transition transform hover:scale-105">
+                        ارسال پیام
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
