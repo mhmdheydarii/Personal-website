@@ -14,8 +14,8 @@ class ServiceAdmin(admin.ModelAdmin):
 
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ['fullname', 'created_date', 'is_seen']
-    search_fields = ['email']
+    list_display = ['name', 'created_date', 'is_seen']
+    search_fields = ['name']
 
 admin.site.register(Skill)
 

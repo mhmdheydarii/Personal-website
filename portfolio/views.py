@@ -24,10 +24,10 @@ class IndexView(SuccessMessageMixin, TemplateView):
 
         if form.is_valid():
             form.save()
-            messages.success(self.request, "پیام شما با موفقیت ارسال شد")
+            messages.success(request, "Your message was sent successfully. We’ll get back to you soon.")
             return redirect("portfolio:index")
         else:
-            messages.error(self.request, "پیام شما ارسال نشد مجدادا تلاش کنید")
+            messages.error(request, "There was an error sending your message.")
         
         context = self.get_context_data()
         context["form"] = form

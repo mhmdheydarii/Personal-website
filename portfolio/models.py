@@ -1,6 +1,6 @@
 from django.db import models
 from django.core.validators import EmailValidator
-
+from .vlidators import validate_iranian_cellphone_number
 # Create your models here.
 
 
@@ -37,15 +37,15 @@ class Service(models.Model):
 
 
 class Contact(models.Model):
-    fullname = models.CharField(max_length=250)
-    email = models.EmailField(validators=[EmailValidator])
+    name = models.CharField(max_length=250)
+    phone_number = models.CharField(max_length=12, validators=[validate_iranian_cellphone_number])
     message = models.TextField()
 
     is_seen = models.BooleanField(default=False)
     created_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.fullname
+        return self.name
 
     class Meta:
         ordering = ["-created_date"]
