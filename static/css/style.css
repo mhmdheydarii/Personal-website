@@ -947,7 +947,7 @@ a.contact-item:hover {
     transition: 0.25s ease;
   }
 
-  .main-nav.open {
+  .main-nav.active {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
@@ -1160,4 +1160,31 @@ a.contact-item:hover {
 
 .nav-toggle[aria-expanded="true"] .nav-icon-close {
   display: inline-block;
+}
+
+.image-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.image-modal img {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.close-image {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
 }

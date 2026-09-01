@@ -41,7 +41,8 @@
         <a href="https://github.com/mhmdheydarii" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           <i class="fa-brands fa-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/mhmdhosin-heydari-31bb3a42a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/mhmdhosin-heydari-31bb3a42a/" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn">
           <i class="fa-brands fa-linkedin"></i>
         </a>
         <a href="gmail:mhmdhosinheidari@gmail.com" aria-label="Email">
@@ -213,21 +214,36 @@
         <div class="projects-grid">
           {% for project in projects %}
           <article class="project-card reveal">
+
             <div class="project-image">
-              <img src="{{project.image.url}}" alt="Shop API project" loading="lazy">
+              <img src="{{ project.image.url }}" alt="{{ project.title }}" loading="lazy" onclick="openImage(this.src)">
             </div>
+
             <div class="project-body">
-              <h3>{{project.title}} </h3>
+              <h3>{{ project.title }}</h3>
+
               <div class="tags">
-                {% for skill in project.skills %}
-                <span>{{skill.name}}</span>
+                {% for skill in project.skill.all %}
+                <span>{{ skill.name }}</span>
                 {% endfor %}
               </div>
-              <p>{{project.description}}</p>
-              <a href="{{project.address}}" class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+
+              <p>{{ project.description }}</p>
+
+              <a href="{{ project.address }}" class="project-link">
+                View Project <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
+
           </article>
           {% endfor %}
+
+          <!-- Image Lightbox -->
+          <div id="imageModal" class="image-modal" onclick="closeImage()">
+            <span class="close-image">&times;</span>
+            <img id="modalImage" src="" alt="">
+          </div>
+
         </div>
       </div>
     </section>
@@ -315,8 +331,8 @@
 
             <div class="form-group">
               <label>Phone Number</label>
-              <input name="phone_number" type="tel" placeholder="Your phone number" autocomplete="tel"
-                inputmode="tel" required>
+              <input name="phone_number" type="tel" placeholder="Your phone number" autocomplete="tel" inputmode="tel"
+                required>
             </div>
 
             <div class="form-group">
@@ -325,8 +341,8 @@
             </div>
 
             <div class="form-group">
-                <label for="{{ form.captcha.id_for_text }}">Captcha</label>
-                {{ form.captcha }}
+              <label for="{{ form.captcha.id_for_text }}">Captcha</label>
+              {{ form.captcha }}
             </div>
 
             <button type="submit" class="btn btn-primary form-submit">

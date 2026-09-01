@@ -166,3 +166,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+function openImage(src) {
+  const modal = document.getElementById("imageModal");
+  const image = document.getElementById("modalImage");
+
+  image.src = src;
+  modal.style.display = "flex";
+}
+
+function closeImage() {
+  document.getElementById("imageModal").style.display = "none";
+}
