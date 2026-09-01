@@ -1,0 +1,350 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Muhammad Hossein Heydari — Backend Developer, Django & DRF Specialist">
+  <meta name="theme-color" content="#05090a">
+  <title>Mohammad Hosein Heydari | Backend Developer</title>
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand" aria-label="Home">MH</a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <i class="fa-solid fa-bars nav-icon-bars"></i>
+        <i class="fa-solid fa-xmark nav-icon-close" aria-hidden="true"></i>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="#home" class="nav-link active">Home<span></span></a>
+        <a href="#about" class="nav-link">About<span></span></a>
+        <a href="#skills" class="nav-link">Skills<span></span></a>
+        <a href="#projects" class="nav-link">Projects<span></span></a>
+        <a href="#experience" class="nav-link">Experience<span></span></a>
+        <a href="#contact" class="nav-link">Contact<span></span></a>
+      </nav>
+
+      <div class="social-links">
+        <a href="https://github.com/mhmdheydarii" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/mhmdhosin-heydari-31bb3a42a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="gmail:mhmdhosinheidari@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">Hi, my name is</p>
+          <h1>Mohammad Hosein<br>Heydari</h1>
+          <h2>Backend Developer <span>|</span> Django &amp; DRF Specialist</h2>
+
+          <p class="hero-description">
+            I build scalable backend systems and REST APIs with Python, Django, and DRF — focused on clean code,
+            performance, and real-world solutions.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              View My Work <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="{% static 'pdf/resume.pdf' %}" class="btn btn-outline" download>
+              Download CV <i class="fa-solid fa-download"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <!-- Replace this file with your portrait -->
+          <div class="hero-photo">
+            <img src="https://picsum.photos/700/700" alt="Mohammad Hossein Heydari" loading="eager"
+              fetchpriority="high">
+          </div>
+
+          <div class="code-decoration" aria-hidden="true">
+            <span>def build_backend():</span>
+            <span>&nbsp;&nbsp;return "scalable"</span>
+            <span>class BackendDeveloper:</span>
+            <span>&nbsp;&nbsp;pass</span>
+          </div>
+
+          <div class="dot-pattern" aria-hidden="true"></div>
+          <div class="hero-orbit" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="about-card reveal">
+
+          <div class="about-copy">
+            <div class="section-heading compact">
+              <h2>About Me</h2>
+              <span></span>
+            </div>
+
+            <p>
+              I'm a backend developer focused on Python, Django, and Django REST Framework. I enjoy building clean
+              RESTful APIs, working with databases and caching, and using Docker to build reliable applications.
+            </p>
+            <p>
+              When I'm not coding, I enjoy playing guitar, working out, and learning something new.
+            </p>
+          </div>
+
+          <div class="about-facts">
+            <div class="fact-card">
+              <i class="fa-regular fa-hourglass-half"></i>
+              <strong>19</strong>
+              <small>Age</small>
+            </div>
+            <div class="fact-card">
+              <i class="fa-solid fa-server"></i>
+              <strong>Backend Developer</strong>
+              <small>Work</small>
+            </div>
+            <div class="fact-card">
+              <i class="fa-brands fa-python"></i>
+              <strong>Python, Django, DRF</strong>
+              <small>Specialization</small>
+            </div>
+            <div class="fact-card">
+              <i class="fa-solid fa-location-dot"></i>
+              <strong>Iran</strong>
+              <small>Location</small>
+            </div>
+            <div class="fact-card">
+              <i class="fa-solid fa-book"></i>
+              <strong>Computer Engineer</strong>
+              <small>Education</small>
+            </div>
+            <div class="fact-card">
+              <i class="fa-regular fa-lightbulb"></i>
+              <strong>Always Learning</strong>
+              <small>Mindset</small>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Skills &amp; Technologies</h2>
+          <span></span>
+        </div>
+
+        <div class="skills-grid reveal">
+          <div class="skill">
+            <i class="fa-brands fa-python python"></i>
+            <span>Python</span>
+          </div>
+          <div class="skill">
+            <span class="skill-mark django-mark">dj</span>
+            <span>Django</span>
+          </div>
+          <div class="skill">
+            <span class="skill-mark drf-mark">DRF</span>
+            <span>DRF</span>
+          </div>
+          <div class="skill">
+            <i class="fa-solid fa-database postgres"></i>
+            <span>PostgreSQL</span>
+          </div>
+          <div class="skill">
+            <i class="fa-solid fa-layer-group redis"></i>
+            <span>Redis</span>
+          </div>
+          <div class="skill">
+            <i class="fa-brands fa-docker docker"></i>
+            <span>Docker</span>
+          </div>
+          <div class="skill">
+            <i class="fa-brands fa-git-alt git"></i>
+            <span>Git</span>
+          </div>
+          <div class="skill">
+            <i class="fa-brands fa-github github"></i>
+            <span>GitHub</span>
+          </div>
+          <!--<div class="skill">
+            <i class="fa-solid fa-arrows-rotate celery"></i>
+            <span>Celery</span>
+          </div>-->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Featured Projects</h2>
+          <span></span>
+        </div>
+
+        <div class="projects-grid">
+          {% for project in projects %}
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img src="{{project.image.url}}" alt="Shop API project" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>{{project.title}} </h3>
+              <div class="tags">
+                {% for skill in project.skills %}
+                <span>{{skill.name}}</span>
+                {% endfor %}
+              </div>
+              <p>{{project.description}}</p>
+              <a href="{{project.address}}" class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STATS ================= -->
+    <section class="section stats-section" id="experience">
+      <div class="container">
+        <div class="stats-card reveal">
+          <div class="stat">
+            <i class="fa-solid fa-globe"></i>
+            <strong>2</strong>
+            <span>Years Learning</span>
+          </div>
+          <div class="stat">
+            <i class="fa-regular fa-folder-open"></i>
+            <strong>10+</strong>
+            <span>Projects Completed</span>
+          </div>
+          <div class="stat">
+            <i class="fa-solid fa-chart-column"></i>
+            <strong>5+</strong>
+            <span>Technologies</span>
+          </div>
+          <div class="stat">
+            <i class="fa-regular fa-circle-check"></i>
+            <strong>100%</strong>
+            <span>Passion</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-layout reveal">
+
+          <div class="contact-intro">
+            <div class="section-heading compact">
+              <h2>Let's work together</h2>
+              <span></span>
+            </div>
+            <p>
+              I'm currently open to new opportunities and exciting projects.
+              Feel free to reach out!
+            </p>
+            <a href="#contact-form" class="btn btn-primary">
+              Get In Touch <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="contact-info">
+            <a href="gmail:mhmdhosinheidari@gmail.com" class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>
+                <small>Email</small>
+                mhmdhosinheidari@gmail.com
+              </span>
+            </a>
+
+            <a href="https://github.com/mhmdheydarii" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <i class="fa-brands fa-github"></i>
+              <span>
+                <small>GitHub</small>
+                github.com/mhmdheydarii
+              </span>
+            </a>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>
+                <small>Location</small>
+                Iran
+              </span>
+            </div>
+          </div>
+
+          <!-- Contact form replaces the image from the reference design -->
+          <form class="contact-form" id="contact-form" action="#" method="post">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" placeholder="Your phone number" autocomplete="tel"
+                inputmode="tel" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">
+              Send Message <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© 2026 Mohammad Hossein Heydari. All rights reserved.</p>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="{% static 'js/script.js' %}" defer></script>
+</body>
+
+</html>

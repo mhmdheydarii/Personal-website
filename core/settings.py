@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.sitemaps",
     "django.contrib.sites",
     "django.contrib.staticfiles",
+    "captcha",
     "portfolio",
 ]
 
@@ -80,10 +81,10 @@ WSGI_APPLICATION = "core.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": 'postgres',
-        "USER": 'postgres',
-        "PASSWORD": '13862007Mh#',
-        "HOST": 'localhost',
+        "NAME": "postgres",
+        "USER": "postgres",
+        "PASSWORD": "13862007Mh#",
+        "HOST": "localhost",
         "PORT": 5432,
     }
 }
