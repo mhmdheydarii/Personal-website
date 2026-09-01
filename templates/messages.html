@@ -1,0 +1,40 @@
+{% load static %}
+{% if messages or form.errors %}
+<link rel="stylesheet" href="{% static 'css/popup.css' %}">
+<div id="popup-overlay" class="popup-overlay">
+    <div class="popup">
+
+        <button class="popup-close" onclick="closePopup()">&times;</button>
+
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+            {{ message|safe }}
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        {% if form.errors %}
+        <div class="alert alert-danger">
+            <ul>
+                <li>
+                    <a>
+                       Please enter the information correctly.
+                    </a>
+                </li>
+            </ul>
+
+            {% if form.non_field_errors %}
+            {{ form.non_field_errors }}
+            {% endif %}
+        </div>
+        {% endif %}
+
+    </div>
+</div>
+<script>
+    function closePopup() {
+        document.getElementById('popup-overlay').style.display = 'none';
+    }
+</script>
+{% endif %}
