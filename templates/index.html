@@ -80,16 +80,29 @@
         <div class="hero-visual reveal">
           <!-- Replace this file with your portrait -->
           <div class="hero-photo">
-            <img src="{% static 'image/person.jpg' %}" alt="Mohammad Hossein Heydari" loading="eager"
+            <img src="{% static 'image/per.jpg' %}" alt="Mohammad Hossein Heydari" loading="eager"
               fetchpriority="high">
           </div>
 
+
           <div class="code-decoration" aria-hidden="true">
-            <span>def build_backend():</span>
-            <span>&nbsp;&nbsp;return "scalable"</span>
             <span>class BackendDeveloper:</span>
-            <span>&nbsp;&nbsp;pass</span>
+            <span>&nbsp;&nbsp;def __init__(self):</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;self.stack = [</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Python", "Django",</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"DRF", "PostgreSQL"</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;]</span>
+            <span>&nbsp;&nbsp;def build(self):</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;return "scalable_system"</span>
+            <span>&nbsp;&nbsp;def deploy(self):</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;return Docker("production")</span>
+            <span>&nbsp;</span>
+            <span># clean code</span>
+            <span># scalable architecture</span>
+            <span># reliable APIs</span>
           </div>
+
+
 
           <div class="dot-pattern" aria-hidden="true"></div>
           <div class="hero-orbit" aria-hidden="true"></div>
