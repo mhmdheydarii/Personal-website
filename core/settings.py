@@ -26,7 +26,8 @@ SECRET_KEY = config("SECRET_KEY", default="test")
 DEBUG = config("DEBUG", default=True)
 
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = config(
+    "ALLOWED_HOSTS", cast=lambda v: [item.strip() for item in v.split(",")], default="*")
 
 
 # Application definition
