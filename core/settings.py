@@ -136,3 +136,8 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://backend-x4q-mhmdhosin.runflare.cloud",
+]
