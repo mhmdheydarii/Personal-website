@@ -306,12 +306,16 @@ img {
 
 .hero-photo {
   position: absolute;
-  inset: 15px 0 0 20px;
+  top: 15px;
+  left: 40px;
+  right: auto;
+
+  width: 410px;
+  height: 410px;
+
   z-index: 2;
   overflow: hidden;
-  border-radius: 50% 50% 16% 16%;
-  mask-image: linear-gradient(to bottom, #000 70%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent 100%);
+  border-radius: 50%;
 }
 
 .hero-photo::after {
@@ -1004,7 +1008,15 @@ a.contact-item:hover {
   }
 
   .hero-photo {
-    inset: 0 20px 0 20px;
+  width: min(310px, calc(100vw - 40px));
+  height: min(310px, calc(100vw - 40px));
+
+  top: 0;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+
+  transform: translateX(-50%);
   }
 
   .hero-orbit {
