@@ -142,7 +142,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://backend-x4q-mhmdhosin.runflare.cloud",
 ]
 
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 
 SESSION_COOKIE_SECURE = True
 
