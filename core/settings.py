@@ -139,7 +139,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://backend-w81-mhmdhosin.runflare.cloud",
+    "https://backend-so3-mhmdhosin.runflare.cloud",
 ]
 
 SECURE_SSL_REDIRECT = False
