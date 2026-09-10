@@ -605,7 +605,7 @@ img {
   gap: 7px;
   margin-top: 8px;
   color: var(--accent);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
 }
 
@@ -681,7 +681,7 @@ img {
   max-width: 260px;
   margin: 11px 0 20px;
   color: #8f989a;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.8;
 }
 
@@ -1000,7 +1000,7 @@ a.contact-item:hover {
 
   .hero-description {
     max-width: 500px;
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .hero-visual {
@@ -1043,7 +1043,7 @@ a.contact-item:hover {
   }
 
   .about-copy p {
-    font-size: 11px;
+    font-size: 13px;
   }
 
   .about-facts {
@@ -1083,7 +1083,7 @@ a.contact-item:hover {
 
   .project-body p {
     min-height: 0;
-    font-size: 11px;
+    font-size: 13px;
   }
 
   .stats-card {
@@ -1136,7 +1136,7 @@ a.contact-item:hover {
   }
 
   .skill > span:last-child {
-    font-size: 10px;
+    font-size: 13px;
   }
 
   .about-facts {
